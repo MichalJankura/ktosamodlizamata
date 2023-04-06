@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Kto sa teraz modlí za Mateja?</title>
+	<title>Kto sa teraz modlí za Mateja</title>
 	<style>
 		body {
 			font-size: 2em;
@@ -20,6 +20,11 @@
 			font-size: 3em;
 			margin-bottom: 20px;
 		}
+         
+        #meno2 {
+			font-size: 1em;
+			margin-bottom: 15px;
+		}
 
 		#footer {
 			position: absolute;
@@ -33,7 +38,8 @@
 </head>
 <body>
 	<p id="meno"></p>
-	<div id="footer">
+	<p id="meno2"></p>
+    <div id="footer">
 		<p>Created by Michal Jankura ©</p>
 	</div>
 
@@ -68,8 +74,11 @@
 		let d = new Date();
 		let hodina = d.getHours();
 		let meno = mena[hodina];
-
-		document.getElementById("meno").innerHTML = "🙏 " + meno + " 🙏";
+        let meno2 = mena[hodina+1]
+		
+        document.getElementById("meno").innerHTML = "🙏 " + meno + " 🙏";
+        document.getElementById("meno2").innerHTML = "🔜" + meno2 + " 🙏";
+        
 	</script>
 </body>
 </html>
