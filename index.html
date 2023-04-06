@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kto sa teraz modlí za Mateja?</title>
+	<style>
+		body {
+			font-size: 2em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: black;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		#meno {
+			font-size: 3em;
+			margin-bottom: 20px;
+		}
+
+		#footer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			padding: 5px;
+			font-size: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<p id="meno"></p>
+	<div id="footer">
+		<p>Created by Michal Jankura ©</p>
+	</div>
+
+	<script>
+		let mena = [
+			"Paťa Melicherová",
+			"Lucia Počatková",
+			"Mertinkovci",
+			"Sofia Filičková",
+			"Lívia Jančišinová",
+			"Juraj Kuzmiak",
+			"Tomáš Solár",
+			"Alžbeta Jacková",
+			"Filip B.",
+			"Paťa Melicherová",
+			"Katarína Filičková",
+			"Monika Tomusová",
+			"Tomáš Oravec",
+			"Nina Jančišinová",
+			"O&S Tokarčikovci",
+			"Jožko Maretta",
+			"Tomáš Reľovský",
+			"Karin Vasiliková",
+			"Opinovci",
+			"Anna Tinathová",
+			"Gerard Strič",
+			"Jana Lukačovská",
+			"Klaudia Šprochova",
+			"Zuzka Lukačovská"
+		];
+
+		let d = new Date();
+		let hodina = d.getHours();
+		let meno = mena[hodina];
+
+		document.getElementById("meno").innerHTML = meno;
+	</script>
+</body>
+</html>
